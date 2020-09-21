@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useContext} from 'react';
+import {RoutesContext} from './routesContext'
+import {Route, Switch} from 'react-router-dom'
+import {Banner, Sidebar, Home, Footer} from './components/index'
 import './App.css';
 
 function App() {
+
+  const {routes} = useContext(RoutesContext)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div
+      className="App"
+    >
+      <div
+        className="banner"
+      >
+        {/*  */}
+      </div>
+      <div
+        className="sidebar"
+      >
+        <Sidebar
+          isOpen={isSidebarOpen}
+        />
+      </div>
+      <Switch>
+        {/* home page */}
+        <Route
+          path={routes.home}
         >
-          Learn React
-        </a>
-      </header>
+          <Home />
+        </Route>
+      </Switch>
+      <div
+        className="footer"
+      >
+        {/*  */}
+      </div>
     </div>
   );
 }
