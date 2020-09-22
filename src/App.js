@@ -7,7 +7,7 @@ import './App.css';
 function App() {
 
   const {routes} = useContext(RoutesContext)
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
 
   return (
     <div
@@ -16,7 +16,24 @@ function App() {
       <div
         className="banner"
       >
-        {/*  */}
+        <Banner />
+      </div>
+      <Switch>
+        {/* home page */}
+        <Route
+          path={routes.home}
+        >
+          <div
+            className="home"
+          >
+            <Home />
+          </div>
+        </Route>
+      </Switch>
+      <div
+        className="footer"
+      >
+        <Footer />
       </div>
       <div
         className="sidebar"
@@ -24,19 +41,6 @@ function App() {
         <Sidebar
           isOpen={isSidebarOpen}
         />
-      </div>
-      <Switch>
-        {/* home page */}
-        <Route
-          path={routes.home}
-        >
-          <Home />
-        </Route>
-      </Switch>
-      <div
-        className="footer"
-      >
-        {/*  */}
       </div>
     </div>
   );

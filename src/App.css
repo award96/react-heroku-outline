@@ -1,3 +1,18 @@
 .App {
   margin: 0;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 5rem 5fr 3rem;
+}
+
+.banner {
+  background-color: aqua;
+}
+
+.home {
+  background-color: beige;
+}
+
+.footer {
+  background-color: crimson;
 }

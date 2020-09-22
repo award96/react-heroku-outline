@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Drawer from '@material-ui/core/Drawer'
 import './Sidebar.css'
 
@@ -12,9 +12,28 @@ const Sidebar = (props) => {
       open={isOpen}
     >
       <div
-        className="root"
+        className="sidebar-root"
       >
-        Sidebar
+        <div
+          className="item"
+        >
+          query
+        </div>
+        <div
+          className="item"
+        >
+          data processing
+        </div>
+        <div
+          className="item"
+        >
+          graph type
+        </div>
+        <div
+          className="item"
+        >
+          button
+        </div>
       </div>
     </Drawer>
   )

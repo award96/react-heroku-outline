@@ -1,0 +1,26 @@
+.banner-root {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 30vw 50vw 20vw;
+}
+
+.logo {
+  width :100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-area {
+  width :100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu {
+  width :100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
