@@ -7,7 +7,7 @@ import './App.css';
 function App() {
 
   const {routes} = useContext(RoutesContext)
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
     <div
